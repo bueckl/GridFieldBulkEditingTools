@@ -212,7 +212,7 @@
 						}					
 					}	
 
-					$btn.addClass('loading');				
+					//$btn.addClass('loading');				
 
 					if ( config[action]['isAjax'] )
 					{
