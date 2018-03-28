@@ -147,7 +147,7 @@ class GridFieldBulkUpload_Request extends RequestHandler
 
 			if ( $uploadedFile instanceof Image )
 			{
-				$uploadResponse['thumbnail_url'] = $uploadedFile->CroppedImage(80,60)->getURL();
+				$uploadResponse['thumbnail_url'] = $uploadedFile->CroppedImage(30,30)->getURL();
 			}
 			else{
 				$uploadResponse['thumbnail_url'] = $uploadedFile->Icon();
@@ -195,7 +195,14 @@ class GridFieldBulkUpload_Request extends RequestHandler
 		return UploadField_SelectHandler::create($this, $uploadField->getFolderName());
 	}
 
-
+	/**
+	 * @return String
+	 */
+	public function getDisplayFolderName() {
+		return $this->displayFolderName;
+	}
+    
+    
 	/**
 	 * Pass getRelationAutosetClass request to UploadField
 	 * Used by select dialog
