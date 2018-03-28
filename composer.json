@@ -15,5 +15,8 @@
   "repositories": [{
     "type": "vcs",
     "url": "git@github.com:colymba/GridFieldBulkEditingTools.git"
-  }]
+  }],
+	"require": {
+    "silverstripe/framework": ">=3.6"
+	}
 }
