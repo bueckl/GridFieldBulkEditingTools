@@ -147,7 +147,7 @@ class GridFieldBulkUpload_Request extends RequestHandler
 
 			if ( $uploadedFile instanceof Image )
 			{
-				$uploadResponse['thumbnail_url'] = $uploadedFile->CroppedImage(30,30)->getURL();
+				$uploadResponse['thumbnail_url'] = $uploadedFile->CroppedImage(80,60)->getURL();
 			}
 			else{
 				$uploadResponse['thumbnail_url'] = $uploadedFile->Icon();

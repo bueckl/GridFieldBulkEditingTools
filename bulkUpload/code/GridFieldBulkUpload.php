@@ -15,7 +15,7 @@ class GridFieldBulkUpload implements GridField_HTMLProvider, GridField_URLHandle
 	 * @var array 
 	 */
 	protected $config = array(
-    'fileRelationName'  => null
+		'fileRelationName'  => null
 	);
 
 
@@ -33,8 +33,8 @@ class GridFieldBulkUpload implements GridField_HTMLProvider, GridField_URLHandle
 	 */
 	protected $ufConfig = array(
 		'sequentialUploads' => false,
-    'canAttachExisting' => true,
-    'canPreviewFolder'  => true
+		'canAttachExisting' => true,
+		'canPreviewFolder'  => true
 	);
 
 
@@ -48,7 +48,7 @@ class GridFieldBulkUpload implements GridField_HTMLProvider, GridField_URLHandle
 	 * @var array 
 	 */
 	protected $ufSetup = array(
-    'setFolderName' => 'bulkUpload'
+		'setFolderName' => 'bulkUpload'
 	);
 
 
@@ -62,7 +62,7 @@ class GridFieldBulkUpload implements GridField_HTMLProvider, GridField_URLHandle
 	 * @var array 
 	 */
 	protected $ufValidatorSetup = array(
-    'setAllowedMaxFileSize' => null
+		'setAllowedMaxFileSize' => null
 	);
 
 
@@ -123,7 +123,7 @@ class GridFieldBulkUpload implements GridField_HTMLProvider, GridField_URLHandle
 	 */
 	function setUfConfig ( $reference, $value )
 	{
-		$this->ufConfig[$reference] = $value;		
+		$this->ufConfig[$reference] = $value;
 		return $this;
 	}
 
@@ -279,8 +279,8 @@ class GridFieldBulkUpload implements GridField_HTMLProvider, GridField_URLHandle
 		$uploadField = UploadField::create($fileRelationName, '')
 			->setForm($gridField->getForm())
 
-			->setConfig('previewMaxWidth', 20)
-			->setConfig('previewMaxHeight', 20)
+			->setConfig('previewMaxWidth', 80)
+			->setConfig('previewMaxHeight', 60)
 			->setConfig('changeDetection', false)
 			
 			->setRecord(DataObject::create()) // avoid UploadField to get auto-config from the Page (e.g fix allowedMaxFileNumber)
